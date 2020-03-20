@@ -31,7 +31,7 @@ const SmurfForm = props => {
                 name="name"
                 onChange={handleChanges}
                 />
-            <label htmlFor="age">Name</label>
+            <label htmlFor="age">Age</label>
             <input 
                 id="age"
                 type="text"
@@ -39,7 +39,7 @@ const SmurfForm = props => {
                 onChange={handleChanges}
                 placeholder="age"
                 />
-            <label htmlFor="height">Name</label>
+            <label htmlFor="height">Height</label>
             <input 
                 id="height"
                 type="text"

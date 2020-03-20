@@ -19,7 +19,7 @@ export const smurfReducer = (state = initialState, action) => {
         case NEW_SMURF:
             return {
                 ...state,
-                smurfs: action.payload
+                smurfs: [...state.smurfs, action.payload]
             }
         default: 
             return {

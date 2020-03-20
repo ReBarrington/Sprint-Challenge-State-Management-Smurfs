@@ -29,6 +29,6 @@ export const updateData = () => dispatch => {
     })
 }
 
-export const newSmurf = (name, age, height) => dispatch => {
-    dispatch({ type: NEW_SMURF, payload: { name: name, age: age, height: height} });
+export const newSmurf = (name) => dispatch => {
+    dispatch({ type: NEW_SMURF, payload: name });
 }

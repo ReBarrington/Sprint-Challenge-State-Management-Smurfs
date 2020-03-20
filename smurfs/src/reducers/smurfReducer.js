@@ -1,4 +1,5 @@
-// import { GET_DATA, UPDATE_DATA } from '../actions';
+import { GET_DATA, UPDATE_DATA, NEW_SMURF } from "../actions/actions";
+
 
 const initialState = {
     smurfs: [],
@@ -6,6 +7,20 @@ const initialState = {
 
 export const smurfReducer = (state = initialState, action) => {
     switch(action.type) {
+        case GET_DATA:
+            return {
+                ...state,
+            }
+        case UPDATE_DATA:
+            return {
+                ...state,
+                smurfs: action.payload
+            }
+        case NEW_SMURF:
+            return {
+                ...state,
+                smurfs: action.payload
+            }
         default: 
             return {
                 ...state

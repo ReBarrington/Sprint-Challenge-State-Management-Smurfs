@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import { newSmurf } from '../actions/actions';
 import { connect } from 'react-redux';
 
+
 const SmurfForm = props => {
     const [card, setCard] = useState({
         name: "",
@@ -17,32 +18,34 @@ const SmurfForm = props => {
         props.newSmurf(card);
     };
     return (
-        <form onSubmit={submitForm}>
-            <label htmlFor="name">Name</label>
-            <input 
-                id="name"
-                type="text"
-                name="name"
-                onChange={handleChanges}
-                />
-            <label htmlFor="age">Age</label>
-            <input 
-                id="age"
-                type="text"
-                name="age"
-                onChange={handleChanges}
-                placeholder="age"
-                />
-            <label htmlFor="height">Height</label>
-            <input 
-                id="height"
-                type="text"
-                name="height"
-                onChange={handleChanges}
-                placeholder="height"
-                />
-            <button type="submit">Submit</button>
-        </form>
+        <div className='newsmurf-form'>
+            <form onSubmit={submitForm}>
+                <label htmlFor="name">Name</label>
+                <input 
+                    id="name"
+                    type="text"
+                    name="name"
+                    onChange={handleChanges}
+                    />
+                <label htmlFor="age">Age</label>
+                <input 
+                    id="age"
+                    type="text"
+                    name="age"
+                    onChange={handleChanges}
+                    placeholder="age"
+                    />
+                <label htmlFor="height">Height</label>
+                <input 
+                    id="height"
+                    type="text"
+                    name="height"
+                    onChange={handleChanges}
+                    placeholder="height"
+                    />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     )
 }
 

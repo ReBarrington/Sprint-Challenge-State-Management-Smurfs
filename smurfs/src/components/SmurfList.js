@@ -6,8 +6,6 @@ import { getData, newSmurf } from '../actions/actions';
 
 const SmurfList = props => {
 
-    console.log(props, ' is props in SmurfList')
-
     useEffect(() => {
         props.getData();
     }, [])

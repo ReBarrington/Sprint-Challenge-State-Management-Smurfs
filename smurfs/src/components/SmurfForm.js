@@ -10,13 +10,7 @@ const SmurfForm = props => {
     });
     const handleChanges = e => {
         setCard({...card, [e.target.name]: e.target.value })
-        // console.log(card) Tracking changes in entries
     };
-    const getSelectValue = e => {
-        const newCard = {...card};
-        newCard.role = e.target.value;
-        setCard(newCard);
-    }
 
     const submitForm = e => {
         e.preventDefault();

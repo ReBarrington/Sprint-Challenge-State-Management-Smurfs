@@ -1,7 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+import { smurfReducer as reducer } from '../reducers/smurfReducer';
 import "./App.css";
-class App extends Component {
-  render() {
+
+const store = createStore(reducer, applyMiddleware(logger, thunk));
+
+function App() {
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
@@ -10,7 +17,7 @@ class App extends Component {
         <div>Have fun!</div>
       </div>
     );
-  }
+  
 }
 
 export default App;

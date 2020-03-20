@@ -16,13 +16,20 @@ const SmurfForm = props => {
     const submitForm = e => {
         e.preventDefault();
         props.newSmurf(card);
-    };
+        setCard({
+          name: "",
+          age: "",
+          height: "",
+        });
+      }
+
     return (
         <div className='newsmurf-form'>
             <form onSubmit={submitForm}>
                 <label htmlFor="name">Name</label>
                 <input 
                     id="name"
+                    value={card.name}
                     type="text"
                     name="name"
                     onChange={handleChanges}
@@ -30,6 +37,7 @@ const SmurfForm = props => {
                 <label htmlFor="age">Age</label>
                 <input 
                     id="age"
+                    value={card.age}
                     type="text"
                     name="age"
                     onChange={handleChanges}
@@ -38,6 +46,7 @@ const SmurfForm = props => {
                 <label htmlFor="height">Height</label>
                 <input 
                     id="height"
+                    value={card.height}
                     type="text"
                     name="height"
                     onChange={handleChanges}

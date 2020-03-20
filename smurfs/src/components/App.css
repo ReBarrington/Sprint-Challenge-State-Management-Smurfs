@@ -29,9 +29,9 @@ label {
 
 button {
   margin: 1%;
-  padding: 1%;
   width: 20%;
   background-color: #B51B08;
   color: white;
   font-size: 1.5rem;
+  border-radius: 20px;
 }
